@@ -2,7 +2,7 @@ import React from "react";
 import { TextareaStyle } from "./styles";
 
 export default function Input(props) {
-  const { placeholder } = props;
+  const { placeholder, onChange } = props;
 
-  return <TextareaStyle placeholder={placeholder} />;
+  return <TextareaStyle placeholder={placeholder} onChange={onChange} />;
 }

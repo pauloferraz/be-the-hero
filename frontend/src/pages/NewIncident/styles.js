@@ -52,7 +52,7 @@ export const SectionNewIncident = styled.div`
     }
   }
 `;
-export const FormNewIncident = styled.div`
+export const FormNewIncident = styled.form`
   width: 100%;
   max-width: 450px;
 

@@ -35,13 +35,10 @@ export default function Register() {
 
     try {
       const response = await api.post("ongs", data);
+
+      history.push("/");
       alert.success(
-        `Cadastro realizado, seu ID de acesso é: ${response.data.id}`,
-        {
-          onClose: () => {
-            history.push("/");
-          }
-        }
+        `Cadastro realizado, seu ID de acesso é: ${response.data.id}`
       );
     } catch (error) {
       alert.error("Erro ao cadastrar, tente novamente mais tarde.");

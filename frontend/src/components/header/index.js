@@ -18,7 +18,7 @@ export default function Header() {
     <HeaderStyle>
       <img src={imgLogo} alt="logo" />
       <span>
-        Bem vindo, <strong>{ongName}</strong>{" "}
+        Bem vindo(a), <strong>{ongName}</strong>{" "}
       </span>
 
       <Link to="/incidents/new">
