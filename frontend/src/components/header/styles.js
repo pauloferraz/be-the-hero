@@ -5,8 +5,14 @@ export const HeaderStyle = styled.header`
   max-width: 1180px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 20px auto 100px;
   padding: 0 30px;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
 
   span {
     font-size: 20px;
@@ -26,8 +32,9 @@ export const HeaderStyle = styled.header`
     height: 60px;
     width: 60px;
     border-radius: 4px;
-    border: 1px solid #dcdce6;
-    background: transparent;
+    border: 1px solid;
+    border-color: ${props => props.theme.color.powerButtonBorder};
+    background: ${props => props.theme.color.powerButton};
     margin-left: 16px;
     cursor: pointer;
     transition: border-color 0.2s;

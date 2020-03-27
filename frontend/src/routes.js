@@ -7,16 +7,16 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import NewIncident from "./pages/NewIncident";
 
-function DefaultNavbar({ children }) {
+function DefaultNavbar({ children, toggleTheme }) {
   return (
     <>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       {children}
     </>
   );
 }
 
-const Routes = () => (
+const Routes = props => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/">
@@ -25,7 +25,7 @@ const Routes = () => (
       <Route path="/register">
         <Register />
       </Route>
-      <DefaultNavbar>
+      <DefaultNavbar toggleTheme={props.toggleTheme}>
         <Route path="/profile">
           <Profile />
         </Route>

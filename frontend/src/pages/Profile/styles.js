@@ -15,7 +15,7 @@ export const ContainerProfile = styled.div`
     padding-left: 0px;
   }
   li {
-    background: #fff;
+    background: ${props => props.theme.color.cardColor};
     padding: 24px;
     border-radius: 8px;
     position: relative;
