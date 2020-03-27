@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Provider as AlertProvider, transitions, positions } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { ThemeProvider } from "styled-components";
+import usePersistedState from "./hooks/usePersistedState";
 import light from "./theme/themeLight";
 import dark from "./theme/themeDark";
 import GlobalStyle from "./theme/GlobalStyle";
@@ -17,10 +18,9 @@ const options = {
 };
 
 export default function App() {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = usePersistedState("theme", light);
 
   function toggleTheme() {
-    console.log("Theme:", theme);
     setTheme(theme.title === "light" ? dark : light);
   }
 
